@@ -3,6 +3,8 @@ import os
 
 import fantail
 
+PARAMCACHE = {}
+
 def get_recursive_param(here, filename):
     """
     Recursively load yaml files starting from the directory 'here'
@@ -27,6 +29,10 @@ def get_recursive_param(here, filename):
     
     for c in conf[::-1]:
         fullname = os.path.expanduser(os.path.abspath(c))
-        y = fantail.yaml_file_loader(fullname)
+        if fullname in PARAMCACHE:
+            y = PARAMCACHE[fullname]
+        else:
+            y = fantail.yaml_file_loader(fullname)
+            PARAMCACHE[fullname] = y
         rv.update(y)
     return rv

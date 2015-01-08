@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 # one line description
 description = "tools for Mad & Kea"
 
-version = 0.01
+version = 0.02
 
 setup(name='toMaKe',
       version=version,
@@ -15,13 +15,9 @@ setup(name='toMaKe',
       include_package_data=True,
       packages=find_packages(),
       install_requires=[
-          'Leip',
-          'lockfile',
           'fantail',
-          'grako>3',
           'humanize',
           'jinja2',
-          'psutil',
       ],
       classifiers=[
           'Development Status :: 4 - Beta',
