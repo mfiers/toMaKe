@@ -163,7 +163,7 @@ def askUserEditor(default):
 
     # write default value to the tmp file
     if default:
-        tmp_file.write(default + "\n")
+        tmp_file.write((default + "\n").encode('UTF-8'))
     else:
         tmp_file.write("\n".encode('UTF-8'))
     tmp_file.close()
