@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 # one line description
 description = "tools for Mad & Kea"
 
-version = 0.02
+version = 0.03
 
 setup(name='toMaKe',
       version=version,
@@ -26,5 +26,8 @@ setup(name='toMaKe',
           'Programming Language :: Python',
           'Programming Language :: Python :: 2',
           'Programming Language :: Python :: 2.7',
+          'Programming Language :: Python :: 3',
+          'Programming Language :: Python :: 3.3',
+          'Programming Language :: Python :: 3.4',
       ]
       )
