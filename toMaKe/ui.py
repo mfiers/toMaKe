@@ -13,7 +13,7 @@ sys.path = (
 
 # hack - otherwise readline outputs unwanted control
 # character
-if os.environ.has_key('TERM'):
+if 'TERM' in os.environ:
     if os.environ['TERM'] == 'xterm':
         os.environ['TERM'] = 'vt100'
 
@@ -165,7 +165,7 @@ def askUserEditor(default):
     if default:
         tmp_file.write(default + "\n")
     else:
-        tmp_file.write("\n")
+        tmp_file.write("\n".encode('UTF-8'))
     tmp_file.close()
 
     tty = open('/dev/tty')
