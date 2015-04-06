@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 # one line description
 description = "tools for Mad & Kea"
 
-version = 0.03
+version = 0.05
 
 setup(name='toMaKe',
       version=version,
