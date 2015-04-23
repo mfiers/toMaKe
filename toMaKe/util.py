@@ -107,10 +107,10 @@ def message(cat, message, *args):
     cprint('Kea', 'cyan', end="/")
     cprint(cat, color)
     for line in textwrap.wrap(message):
-        print "  " + line
+        print("  " + line)
 
 
-        
+
 # Borrowed from: http://tinyurl.com/majcr53
 class memoized(object):
 
@@ -142,4 +142,3 @@ class memoized(object):
     def __get__(self, obj, objtype):
         '''Support instance methods.'''
         return functools.partial(self.__call__, obj)
-
